@@ -20,14 +20,58 @@
             Console.WriteLine($"Printing maximum double data: {BigFraction}");
             char Symbol = 'C';
             Console.WriteLine($"Printing a character: {Symbol}");
-            string Sequence = "I am the Author";
-            Console.WriteLine($"Printing an string: {Sequence}");
+            string Sentence = "I am the Author";
+            Console.WriteLine($"Printing an string: {Sentence}");
 
             Console.WriteLine($"Biggest Integer: {Number}");
             int OverFlow = Number + 10;
             Console.WriteLine($"Biggest Integer + 10 (No exceptions) = {OverFlow}");
 
             CheckedMethod(OverFlow, Number);
+
+            string BirthYear = "1997";
+            int Year = int.Parse(BirthYear);
+            Console.WriteLine($"String to int: {Year}");
+            BirthYear = Convert.ToString(Year+2);
+            Console.WriteLine($"Int to String: {BirthYear}");
+
+            string Sequence = "12345678911";
+            long ALongNumber = long.Parse(Sequence);
+            Console.WriteLine($"String to Long: {ALongNumber}");
+            Sequence = Convert.ToString(ALongNumber + 2);
+            Console.WriteLine($"Long to String: {Sequence}");
+
+            string Pi = "3.14159";
+            double PiDouble = double.Parse(Pi);
+            Console.WriteLine($"String to Double: {PiDouble}");
+            Sequence = Convert.ToString(PiDouble);
+            Console.WriteLine($"Double to String: {Sequence}");
+
+            float PiFloat = float.Parse(Pi);
+            Console.WriteLine($"String to Float: {PiFloat}");
+            Sequence = Convert.ToString(PiFloat);
+            Console.WriteLine($"Float to String: {Sequence}");
+
+            string Claim = "True";
+            bool isClaim = Convert.ToBoolean(Claim);
+            Console.WriteLine($"String to Boolean: {isClaim}");
+            Claim = Convert.ToString(isClaim);
+            Console.WriteLine($"Double to String: {Claim}");
+
+            int a = 123;
+            long b = a;
+            Console.WriteLine($"Int to Long implicit conversion");
+            b = long.MaxValue;
+            a = (int) b;
+            Console.WriteLine($"Long to Int explicit conversion (a = {a})");
+
+            char Alpha = 'a';
+            int value = Alpha;
+            Console.WriteLine($"Char to ASCII int implicit conversion: (Int value = {value})");
+            value = (int)Alpha;
+
+            Alpha = (char)value;
+            Console.WriteLine($"Int to ASCII Char explicit conversion: (Character: {Alpha})");
         }
 
         static void CheckedMethod(int OverFlow, int Number)
