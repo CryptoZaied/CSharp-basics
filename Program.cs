@@ -72,6 +72,26 @@
 
             Alpha = (char)value;
             Console.WriteLine($"Int to ASCII Char explicit conversion: (Character: {Alpha})");
+
+            double math = 130;
+            double added = math + 17;
+            Console.WriteLine($"Sum: {added}");
+            double sub = added - 23;
+            Console.WriteLine($"Subtraction: {sub}");
+            double mul = added * sub;
+            Console.WriteLine($"Multiplication: {mul}");
+            double div = mul / math;
+            Console.WriteLine($"Division: {div}");
+            double remainder = math % sub;
+            Console.WriteLine($"Remainder: {remainder}");
+
+            int n = 1, m = 1;
+            int or = n | m;
+            Console.WriteLine($"Logical OR: {or}");
+            int and = n & m;
+            Console.WriteLine($"Logical AND: {and}");
+            int xor = n ^ m;
+            Console.WriteLine($"Logical XOR: {xor}");
         }
 
         static void CheckedMethod(int OverFlow, int Number)
