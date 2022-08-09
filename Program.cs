@@ -106,6 +106,9 @@
             {
                 Console.WriteLine($"Year {Year} is not a leap year.");
             }
+
+            var LeapYear = (Year % 400 == 0) || (Year % 100 != 0 && Year % 4 == 0) ? "It's a leap year" : "Not a leap year";
+            Console.WriteLine(LeapYear);
         }
 
         static void CheckedMethod(int OverFlow, int Number)
