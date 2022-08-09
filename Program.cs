@@ -92,6 +92,20 @@
             Console.WriteLine($"Logical AND: {and}");
             int xor = n ^ m;
             Console.WriteLine($"Logical XOR: {xor}");
+
+            Year = 1997;
+            if(Year % 400 == 0)
+            {
+                Console.WriteLine($"Year {Year} is a leap year.");
+            }
+            else if(Year % 100 != 0 && Year % 4 == 0)
+            {
+                Console.WriteLine($"Year {Year} is a leap year.");
+            }
+            else
+            {
+                Console.WriteLine($"Year {Year} is not a leap year.");
+            }
         }
 
         static void CheckedMethod(int OverFlow, int Number)
