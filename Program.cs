@@ -22,6 +22,24 @@
             Console.WriteLine($"Printing a character: {Symbol}");
             string Sequence = "I am the Author";
             Console.WriteLine($"Printing an string: {Sequence}");
+
+            Console.WriteLine($"Biggest Integer: {Number}");
+            int OverFlow = Number + 10;
+            Console.WriteLine($"Biggest Integer + 10 (No exceptions) = {OverFlow}");
+
+            CheckedMethod(OverFlow, Number);
+        }
+
+        static void CheckedMethod(int OverFlow, int Number)
+        {
+            try
+            {
+                OverFlow = checked(Number + 10);
+            }
+            catch (System.OverflowException e)
+            {
+                Console.WriteLine("CHECKED and CAUGHT:  " + e.ToString());
+            }
         }
     }
 }
