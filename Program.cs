@@ -147,6 +147,62 @@ namespace CsharpBasics
                 and diving into regions the whole code.
             */
             #endregion
+
+            #region Task 9 (Loops)
+            for(var i = 1; i <= 100; i++)
+            {
+                if(i == 95)
+                {
+                    continue;
+                }
+                else if(i==99)
+                {
+                    break;
+                }
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+
+            var k = 1;
+            while(k <= 100)
+            {
+                if (k == 95)
+                {
+                    k++;
+                    continue;
+                }
+                else if (k == 99)
+                {
+                    break;
+                }
+                Console.Write($"{k} ");
+                k++;
+            }
+            Console.WriteLine();
+
+            k = 1;
+            do
+            {
+                if (k == 95)
+                {
+                    k++;
+                    continue;
+                }
+                else if (k == 99)
+                {
+                    break;
+                }
+                Console.Write($"{k} ");
+                k++;
+            } while (k <= 100);
+            Console.WriteLine();
+
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "Mercedes" };
+            foreach(var car in cars)
+            {
+                Console.WriteLine(car);
+            }
+            #endregion
         }
 
         static void CheckedMethod(int OverFlow, int Number)
