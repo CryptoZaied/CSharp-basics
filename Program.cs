@@ -3,6 +3,8 @@
 	This program has total 11 tasks.
 */
 
+using System.Diagnostics.Metrics;
+
 namespace CsharpBasics
 {
     internal class Program
@@ -157,6 +159,7 @@ namespace CsharpBasics
                 }
                 else if(i==99)
                 {
+                    Console.Write($"{i} ");
                     break;
                 }
                 Console.Write($"{i} ");
@@ -173,6 +176,7 @@ namespace CsharpBasics
                 }
                 else if (k == 99)
                 {
+                    Console.Write($"{k} ");
                     break;
                 }
                 Console.Write($"{k} ");
@@ -190,6 +194,7 @@ namespace CsharpBasics
                 }
                 else if (k == 99)
                 {
+                    Console.Write($"{k} ");
                     break;
                 }
                 Console.Write($"{k} ");
@@ -201,6 +206,44 @@ namespace CsharpBasics
             foreach(var car in cars)
             {
                 Console.WriteLine(car);
+            }
+            #endregion
+
+            #region Task 11 (Switch Case)
+            Console.Write("Enter your marks: ");
+            var input = Console.ReadLine();
+            int marks = 0;
+            if(input != null)
+            {
+                marks = int.Parse(input);
+            }
+
+            switch (marks)
+            {
+                case > 80:
+                    Console.WriteLine("Grade A+");
+                    break;
+                case > 70:
+                    Console.WriteLine("Grade A");
+                    break;
+                case > 60:
+                    Console.WriteLine("Grade A-");
+                    break;
+                case > 55:
+                    Console.WriteLine("Grade B+");
+                    break;
+                case > 50:
+                    Console.WriteLine("Grade B");
+                    break;
+                case > 45:
+                    Console.WriteLine("Grade B-");
+                    break;
+                case > 40:
+                    Console.WriteLine("Grade C");
+                    break;
+                default:
+                    Console.WriteLine("Grade F");
+                    break;
             }
             #endregion
         }
